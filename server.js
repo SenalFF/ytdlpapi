@@ -26,8 +26,7 @@ function normalizeYouTubeURL(rawUrl) {
   }
 }
 
-const YTDLP_PATH = "/usr/local/bin/yt-dlp";
-
+const YTDLP_PATH = "yt-dlp"; // use pip-installed yt-dlp from PATH
 app.post("/info", (req, res) => {
   const { url } = req.body;
   const normalized = normalizeYouTubeURL(url);
